@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>PLG_AUTHORINFOBOX</name>
+    <version>2.5-2</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Viktor Vogel</author>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>http://joomla-extensions.kubik-rubik.de/</authorUrl>
+    <copyright>Copyright 2012 Viktor Vogel. All rights reserved.</copyright>
+    <creationDate>04-Jun-2012</creationDate>
+    <description>PLG_AUTHORINFOBOX_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="authorinfobox">authorinfobox.php</filename>
+        <filename plugin="authorinfobox">authorinfobox.css</filename>
+        <filename plugin="authorinfobox">index.html</filename>
+        <folder plugin="authorinfobox">fields</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_authorinfobox.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_authorinfobox.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_authorinfobox.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_authorinfobox.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/plugins/content/authorinfobox/fields">
+            <fieldset name="basic">
+                <field type="krdonationcodecheck" />
+                <field name="title" type="text" default="" size="40" label="PLG_AUTHORINFOBOX_TITLE" description="PLG_AUTHORINFOBOX_TITLEDESC" />
+                <field name="name" type="list" default="0" label="PLG_AUTHORINFOBOX_NAME" description="PLG_AUTHORINFOBOX_NAMEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">PLG_AUTHORINFOBOX_USERNAME</option>
+                    <option value="2">PLG_AUTHORINFOBOX_REALNAME</option>
+                </field>
+                <field name="gravatar" type="list" default="0" label="PLG_AUTHORINFOBOX_GRAVATAR" description="PLG_AUTHORINFOBOX_GRAVATARDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_website" type="list" default="0" label="PLG_AUTHORINFOBOX_WEBSITE" description="PLG_AUTHORINFOBOX_WEBSITEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_email" type="list" default="0" label="PLG_AUTHORINFOBOX_EMAIL" description="PLG_AUTHORINFOBOX_EMAILDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                    <option value="2">PLG_AUTHORINFOBOX_EMAIL_SHOWPLAINTEXT</option>
+                </field>
+                <field name="title_description" type="text" default="" size="40" label="PLG_AUTHORINFOBOX_TITLEDESCRIPTION" description="PLG_AUTHORINFOBOX_TITLEDESCRIPTIONDESC" />
+                <field name="show_description" type="list" default="0" label="PLG_AUTHORINFOBOX_DESCRIPTION" description="PLG_AUTHORINFOBOX_DESCRIPTIONDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="articleview" type="list" default="1" label="PLG_AUTHORINFOBOX_ARTICLEVIEW" description="PLG_AUTHORINFOBOX_ARTICLEVIEWDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="position" type="list" default="1" label="PLG_AUTHORINFOBOX_POSITION" description="PLG_AUTHORINFOBOX_POSITIONDESC">
+                    <option value="0">PLG_AUTHORINFOBOX_BEFORECONTENT</option>
+                    <option value="1">PLG_AUTHORINFOBOX_AFTERCONTENT</option>
+                </field>
+                <field name="exclude_articles_ids" type="textarea" default="" rows="2" cols="50" label="PLG_AUTHORINFOBOX_EXCLUDEARTICLEIDS" description="PLG_AUTHORINFOBOX_EXCLUDEARTICLEIDSDESC" />
+                <field name="exclude_articles_itemids" type="textarea" default="" rows="2" cols="50" label="PLG_AUTHORINFOBOX_EXCLUDEARTICLEITEMIDS" description="PLG_AUTHORINFOBOX_EXCLUDEARTICLEITEMIDSDESC" />
+                <field name="exclude_articles_categories" type="textarea" default="" rows="2" cols="50" label="PLG_AUTHORINFOBOX_EXCLUDEARTICLECATEGORIES" description="PLG_AUTHORINFOBOX_EXCLUDEARTICLECATEGORIESDESC" />
+            </fieldset>
+            <fieldset name="donation">
+                <field name="donation_code" type="text" default="" size="40" label="KR_DONATION_CODE" description="KR_DONATION_CODEDESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
