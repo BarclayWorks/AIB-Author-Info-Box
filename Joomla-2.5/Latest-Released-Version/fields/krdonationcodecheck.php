@@ -3,8 +3,8 @@
  * @Copyright
  * @package     Field - Donation Code Check
  * @author      Viktor Vogel {@link http://www.kubik-rubik.de}
- * @version     Joomla! 2.5 - 1.0
- * @date        Created on 04-Jun-2012
+ * @version     Joomla! 2.5 - 1.3
+ * @date        Created on 11-Nov-2012
  * @link        Project Site {@link http://joomla-extensions.kubik-rubik.de}
  *
  * @license GNU/GPL
@@ -35,9 +35,24 @@ class JFormFieldKRDonationCodeCheck extends JFormField
     {
         $field_set = $this->form->getFieldset();
         $donation_code = $field_set['jform_params_donation_code']->value;
+
+        $session = JFactory::getSession();
+        $field_value_session = $session->get('field_value', null, 'krdonationcodecheck');
+        $donation_code_session = $session->get('donation_code', null, 'krdonationcodecheck');
+
+        if($field_value_session == 1 AND ($donation_code == $donation_code_session))
+        {
+            return;
+        }
+        elseif(!empty($field_value_session) AND ($donation_code == $donation_code_session))
+        {
+            return $field_value_session;
+        }
+
         $host = JURI::getInstance()->getHost();
 
         $field_value = '';
+		$donation_code_check = false;
 
         if($host == 'localhost')
         {
@@ -68,6 +83,17 @@ class JFormFieldKRDonationCodeCheck extends JFormField
             }
         }
 
+        if($donation_code_check == 1)
+        {
+            $session->set('field_value', 1, 'krdonationcodecheck');
+        }
+        else
+        {
+            $session->set('field_value', $field_value, 'krdonationcodecheck');
+        }
+
+        $session->set('donation_code', $donation_code, 'krdonationcodecheck');
+
         return $field_value;
     }
 
@@ -86,8 +112,8 @@ class JFormFieldKRDonationCodeCheck extends JFormField
 
             if(function_exists('curl_init') OR !empty($url_fopen))
             {
-                // You may NOT open this URL without the parameters
                 $url_check = 'http://joomla-extensions.kubik-rubik.de/scripts/je_kr_donation_code_check/je_kr_check_code.php?key='.rawurlencode($donation_code).'&host='.rawurlencode($host);
+
                 if(function_exists('curl_init'))
                 {
                     $ch = curl_init($url_check);
@@ -115,6 +141,12 @@ class JFormFieldKRDonationCodeCheck extends JFormField
             }
         }
 
+        if(preg_match('@(error|access denied)@i', $donation_code_check))
+        {
+            $donation_code_check = -1;
+        }
+
         return $donation_code_check;
     }
+
 }
