@@ -2,7 +2,8 @@
  * @Copyright
  * @package     AIB - Author Info Box
  * @author      Viktor Vogel {@link http://www.kubik-rubik.de}
- * @version     2.5-7 - 2013-05-22
+ * @version     2.5-2
+ * @date        Created on 04-Jun-2012
  * @link        Project Site {@link http://joomla-extensions.kubik-rubik.de/aib-author-info-box}
 */
 
@@ -10,12 +11,6 @@
 #author_infobox .author_infobox_title{font-size: 120%; font-weight: bold; margin-bottom: 10px;}
 #author_infobox .author_infobox_image{float: left; margin: 5px 10px 5px 5px;}
 #author_infobox .author_infobox_image img{width: 80px; height: 80px;}
-#author_infobox .author_infobox_image_jomsocial{float: left; margin: 5px 10px 5px 5px;}
-#author_infobox .author_infobox_image_jomsocial img{width: 64px; height: 64px;}
-#author_infobox .author_infobox_image_kunena{float: left; margin: 5px 10px 5px 5px;}
-#author_infobox .author_infobox_image_kunena img{width: 72px; height: 48px;}
-#author_infobox .author_infobox_image_authorlist{float: left; margin: 5px 10px 5px 5px;}
-#author_infobox .author_infobox_image_authorlist img{width: 100px;}
 #author_infobox .author_infobox_name{margin-bottom: 10px;}
 #author_infobox .author_infobox_aboutme{font-size: 110%; font-weight: bold;}
 #author_infobox .author_infobox_description{width: 100%;}
