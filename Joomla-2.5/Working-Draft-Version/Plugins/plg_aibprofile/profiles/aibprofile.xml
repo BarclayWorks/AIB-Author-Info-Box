@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="aibprofile">
+        <fieldset name="aibprofile" label="PLG_USER_AIBPROFILE_SLIDER">
+            <field name="aibavatar" type="media" id="aibavatar" directory="" label="PLG_USER_AIBPROFILE_AVATAR" description="PLG_USER_AIBPROFILE_AVATARDESC" size="50" />
+            <field name="aibdescription" type="textarea" id="aibdescription" description="PLG_USER_AIBPROFILE_DESCRIPTIONDESC" label="PLG_USER_AIBPROFILE_DESCRIPTION" cols="40" rows="6" filter="raw" />
+            <field name="aibposition" type="text" id="aibposition" description="PLG_USER_AIBPROFILE_POSITIONDESC" filter="string" label="PLG_USER_AIBPROFILE_POSITION" size="60" />
+            <field name="aibwebsite" type="url" id="aibwebsite" description="PLG_USER_AIBPROFILE_WEBSITEDESC" filter="string" label="PLG_USER_AIBPROFILE_WEBSITE" size="60" />
+            <field name="aibgoogleplus" type="text" id="aibgoogleplus" description="PLG_USER_AIBPROFILE_GOOGLEPLUSDESC" filter="string" label="PLG_USER_AIBPROFILE_GOOGLEPLUS" size="60" />
+            <field name="aibtwitter" type="text" id="aibtwitter" description="PLG_USER_AIBPROFILE_TWITTERDESC" filter="string" label="PLG_USER_AIBPROFILE_TWITTER" size="60" />
+            <field name="aibfacebook" type="text" id="aibfacebook" description="PLG_USER_AIBPROFILE_FACEBOOKDESC" filter="string" label="PLG_USER_AIBPROFILE_FACEBOOK" size="60" />
+        </fieldset>
+    </fields>
+</form>
