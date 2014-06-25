@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="package" method="upgrade">
+    <name>PKG_AUTHORINFOBOX</name>
+    <version>3-2</version>
+    <creationDate>2014-01-26</creationDate>
+    <license>http://www.gnu.org/licenses/gpl-3.0</license>
+    <copyright>Copyright 2014 Viktor Vogel. All rights reserved.</copyright>
+    <author>Viktor Vogel</author>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>http://joomla-extensions.kubik-rubik.de/</authorUrl>
+    <description>PKG_AUTHORINFOBOX_XML_DESCRIPTION</description>
+    <packagename>authorinfobox</packagename>
+    <scriptfile>script.php</scriptfile>
+    <files folder="packages">
+        <file type="plugin" id="authorinfobox" group="content">plg_authorinfobox.zip</file>
+        <file type="plugin" id="aibprofile" group="user">plg_aibprofile.zip</file>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.pkg_authorinfobox.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.pkg_authorinfobox.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.pkg_authorinfobox.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.pkg_authorinfobox.sys.ini</language>
+    </languages>
+</extension>
