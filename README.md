@@ -1,6 +1,7 @@
 Author Info FootNote
 ===================
 Adapted from the excellent work of Kubik-Rubik Joomla! Extensions
+
 Original project here:
 Project page: http://joomla-extensions.kubik-rubik.de/aib-author-info-box
 
